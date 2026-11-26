@@ -114,7 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 writeAuditLog(
                     $_SESSION['user_id'],
                     'CREATE_USER',
-                    'Đã tạo tài khoản: ' . $username
+                    'Account created: ' . $username
                 );
             } catch (Throwable $auditError) {
                 error_log($auditError->getMessage());
